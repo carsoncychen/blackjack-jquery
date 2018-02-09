@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+  <title>BLACKJACK</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+</head>
+<body>
+<section class="hide">
+  <center class="landing">
+    <h1 id="landing-title">BLACKJACK</h1>
+    <button id="startbutton">Start</button>
+  </center>
+</section>
+<center class="show">
+  <section class="dealercards"></section>
+  <h2 id="resultdisplay">Deal!</h2>
+  <p><span id="nameinput"></span>'s Wallet: $<span id="playerwallet"></span></p>
+  <section class="playercards"></section>
+  <button id="hitbutton">Hit</button>
+  <button id="standbutton">Stand</button>
+  <button id="dealbutton">Deal!</button>
+  <!-- Trigger/Open The Modal -->
+<button id="myBtn">Rules</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Rules for Blackjack!</h2>
+  <p>Each card has different values. Cards 2-10 has same value as their number. Cards Jack, Queen, and King has value of 10. Ace has value of 11. Goal is to hit 21 with max of 5 cards. If total value exceeds 21, the hand is bust and result in automatic loss.</p>
+  <p>Hit button will draw new card for player.</p>
+  <p>Stand button will pass the turn to dealer</p>
+  <p>Duel button will start new round.</p>
+  </div>
+
+</div>
+</center>
+</body>
+</html>

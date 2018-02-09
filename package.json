@@ -1,0 +1,22 @@
+{
+  "name": "project-1-blackjack",
+  "version": "1.0.0",
+  "description": "project-1-blackjack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:carsoncychen/project-1-blackjack.git"
+  },
+  "author": "Carson Chen <carson.cy.chen@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^4.10.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
