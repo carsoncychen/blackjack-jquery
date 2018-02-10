@@ -1,6 +1,6 @@
 # project-1-blackjack
 
-Check out the game live on bitballoon: http://blackjackbycarson.bitballoon.com/
+Check out the game live on bitballoon: http://carsonchen.io/blackjack-jquery/
 
 Game basic:
 -begin the game with each player and dealer are given two cards

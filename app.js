@@ -101,6 +101,7 @@ $(document).ready(() => {
   const dealerTurn = function () {
     $('#deck-back').remove();
     $('#hitbutton').off('click');
+    $('#standbutton').off('click');
     if (dealerCardCount < 5 && dealerHandValue < 17) {
       dealerDraw();
       setTimeout(dealerTurn(), 10000);
