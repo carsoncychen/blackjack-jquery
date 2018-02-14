@@ -69,7 +69,21 @@ $(document).ready(() => {
   };
   // draws a card and append to player's hand.
 
+  // const checkAce = function (arr) {
+  //   for (let i = 0; i < arr.length; i ++) {
+  //     if (arr[i] === "ace") {
+  //       return true;
+  //     }
+  //   }
+  // }
+
   const checkBust = function (value) {
+    // const hasAce = checkAce(playerHandArray)
+    // const gotAce = false;
+    // if (value > 21 && hasAce === true && gotAce === false) {
+    //   playerHandValue -= 1;
+    //   gotAce = true;
+    // } else
     if (value > 21) {
       setTimeout(() => {
         $('#resultdisplay').text('Bust!');
@@ -118,7 +132,7 @@ $(document).ready(() => {
       $('#standbutton').off('click');
       dealerTurn();
     }
-    checkBust(playerHandValue);
+    checkBust(playerHandValue, playerHandArray);
   };
   // add hit button that add new card to player hand.
   // check if player's has 5 card, then will move to dealer's turn
