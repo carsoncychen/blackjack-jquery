@@ -4,6 +4,7 @@ $(document).ready(() => {
     this.value = value;
   }
 
+  // create new instance of Rank class
   const ranks = [
     new Rank('2', 2),
     new Rank('3', 3),
@@ -31,24 +32,25 @@ $(document).ready(() => {
   let playerName;
   let playerWallet = 3000;
 
-  $('.show').hide();
   // game interface will be hidden when the page loads.
+  $('.show').hide();
 
+  // functions returns a random number between min and max, depending on the argument that pass in.
   const getRandomIndex = function (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
-  // functions returns a random number between min and max, depending on the argument that pass in.
 
+  /* this function is access the ranks array and suits array.
+  Pull random card and suit, and combine them.
+  */
   const drawCard = function () {
     const currentCard = ranks[getRandomIndex(0, 12)];
     const randomSuit = suits[getRandomIndex(0, 3)];
     currentCard.suit = randomSuit;
     return currentCard;
   };
-  /* this function is access the ranks array and suits array.
-  Pull random card and suit, and combine them.
-  */
 
+  // draws a card and append to dealer's hand.
   const dealerDraw = function () {
     const currentCard = drawCard();
     dealerHandArray.push(currentCard.name);
@@ -57,8 +59,8 @@ $(document).ready(() => {
     $('.dealercards').append(`<img src="${cardImg}"/>`);
     dealerCardCount += 1;
   };
-  // draws a card and append to dealer's hand.
 
+  // draws a card and append to player's hand.
   const playerDraw = function () {
     const currentCard = drawCard();
     playerHandArray.push(currentCard.name);
@@ -67,7 +69,6 @@ $(document).ready(() => {
     $('.playercards').append(`<img src="${cardImg}"/>`);
     playerCardCount += 1;
   };
-  // draws a card and append to player's hand.
 
   // const checkAce = function (arr) {
   //   for (let i = 0; i < arr.length; i ++) {
@@ -77,6 +78,7 @@ $(document).ready(() => {
   //   }
   // }
 
+  // check if hand is over 21.
   const checkBust = function (value) {
     // const hasAce = checkAce(playerHandArray)
     // const gotAce = false;
@@ -93,8 +95,8 @@ $(document).ready(() => {
       $('#standbutton').off('click');
     }
   };
-  // check if hand is over 21.
 
+  // compare for dealerHandValue and PlayerHandValue for winner, and display test in result display.
   const compareValue = function () {
     if (dealerHandValue > 21) {
       $('#resultdisplay').text(`Dealer Bust! ${playerName} Won!`);
@@ -109,9 +111,8 @@ $(document).ready(() => {
       $('#resultdisplay').text('Push!');
     }
   };
-  // compare for winner.
 
-
+  // dealer draws cards and add to hand until meeting certain condition.
   const dealerTurn = function () {
     $('#deck-back').remove();
     $('#hitbutton').off('click');
@@ -123,8 +124,9 @@ $(document).ready(() => {
       compareValue();
     }
   };
-  // dealer draws cards and add to hand until meeting certain condition.
 
+  // add hit button that add new card to player hand.
+  // check if player's has 5 card, then will move to dealer's turn
   const hitButton = function () {
     playerDraw();
     if (playerCardCount > 4) {
@@ -134,14 +136,13 @@ $(document).ready(() => {
     }
     checkBust(playerHandValue, playerHandArray);
   };
-  // add hit button that add new card to player hand.
-  // check if player's has 5 card, then will move to dealer's turn
 
+  // function that will pass to dealer's turn
   const standButton = function () {
     dealerTurn();
   };
-  // function that will pass to dealer's turn
 
+  // fun playerDraw function twice, and dealerDraw once, and display card back for dealer
   const startDeal = function () {
     for (let i = 0; i < 2; i += 1) {
       playerDraw();
