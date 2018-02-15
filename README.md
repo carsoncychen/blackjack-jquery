@@ -1,6 +1,6 @@
 # project-1-blackjack
 
-Check out the game live on bitballoon: http://carsonchen.io/blackjack-jquery/
+Check out the game live: http://carsonchen.io/blackjack-jquery/
 
 Game basic:
 -begin the game with each player and dealer are given two cards
@@ -28,15 +28,13 @@ Game basic:
 -player can use hit three times
 -player press stand button to pass the turn to dealer.
 
-Refereces:
-URL: https://codepen.io/walpolea/pen/aOqvKx
-Usage: use as reference for drawing card, and random number generating
+## Built With
 
-URL: https://github.com/apsdehal/blackjack/blob/master/scripts/my_scripts.js
-Usage: use as reference for deck array formation
+* [Codepen](https://codepen.io/walpolea/pen/aOqvKx) - Use as reference for drawing card, and random number generating
 
-URL: https://opengameart.org/content/playing-cards-vector-png
-Usage: deck and card images resources
+* [Github](https://github.com/apsdehal/blackjack/blob/master/scripts/my_scripts.js) - Use as reference for deck array formation
 
-URL: https://github.com/dkendrick25/blackjack/blob/master/blackjack.js
-Usage: use as reference for game logic and card image displaying
+* [Opengameart](https://opengameart.org/content/playing-cards-vector-png) - deck and card images resources
+
+* [Github](https://github.com/dkendrick25/blackjack/blob/master/blackjack.js) - use as reference for card image displaying
+
