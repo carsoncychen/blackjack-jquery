@@ -13,7 +13,7 @@
   "author": "Carson Chen <carson.cy.chen@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^4.10.0"
+    "eslint": "^5.3.0"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
