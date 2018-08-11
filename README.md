@@ -30,11 +30,5 @@ Game basic:
 
 ## Built With
 
-* [Codepen](https://codepen.io/walpolea/pen/aOqvKx) - Use as reference for drawing card, and random number generating
-
-* [Github](https://github.com/apsdehal/blackjack/blob/master/scripts/my_scripts.js) - Use as reference for deck array formation
-
 * [Opengameart](https://opengameart.org/content/playing-cards-vector-png) - deck and card images resources
-
-* [Github](https://github.com/dkendrick25/blackjack/blob/master/blackjack.js) - use as reference for card image displaying
 
